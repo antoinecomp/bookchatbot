@@ -50,7 +50,7 @@ class ActionBookRoom(Action):
         duration = str(duration)
         
         #SQL queries#
-        cnx = mysql.connector.connect(host='35.189.228.223', password='SQL.2019', user="root", database="alex")
+        cnx = mysql.connector.connect(host='I_really_don_t_know_what_to_use_here', password='your_password', user="your_user", database="the_database")
              
 
         dispatch = dispatcher.utter_message(response)
