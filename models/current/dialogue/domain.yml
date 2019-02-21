@@ -1,0 +1,73 @@
+%YAML 1.1
+---
+actions:
+- utter_name
+- utter_thanks
+- utter_greet
+- utter_goodbye
+- action_joke
+- utter_ask_room
+- utter_ask_day
+- utter_ask_hour_start
+- utter_ask_duration
+- action_room
+config:
+  store_entities_as_slots: true
+entities:
+- name
+- name_room
+- day
+- hour_start
+- duration
+forms: []
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- thanks:
+    use_entities: true
+- deny:
+    use_entities: true
+- joke:
+    use_entities: true
+- name:
+    use_entities: true
+slots:
+  day:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  duration:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  hour_start:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  name:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  name_room:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+templates:
+  utter_ask_day:
+  - text: What day?
+  utter_ask_duration:
+  - text: How long would you need ?
+  utter_ask_hour_start:
+  - text: What time do you want to start your meeting?
+  utter_ask_room:
+  - text: In what room?
+  utter_goodbye:
+  - text: Talk to you later!
+  utter_greet:
+  - text: Nice to you meet you {name}. How can I help?
+  utter_name:
+  - text: Hey there! Tell me your name.
+  utter_thanks:
+  - text: My pleasure.

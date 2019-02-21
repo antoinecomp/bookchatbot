@@ -9,10 +9,21 @@ intents:
 
 entities:
 - name
-
+- name_room
+- day
+- hour_start
+- duration
 
 slots:
   name:
+    type: text
+  name_room:
+    type: text
+  day:
+    type: text
+  hour_start:
+    type: text
+  duration:
     type: text
 
 
@@ -22,7 +33,11 @@ actions:
 - utter_greet
 - utter_goodbye
 - action_joke
-
+- utter_ask_room
+- utter_ask_day
+- utter_ask_hour_start
+- utter_ask_duration
+- action_room
 
 templates:
   utter_name:
@@ -36,4 +51,13 @@ templates:
   
   utter_thanks:
   - text: "My pleasure."
+
+  utter_ask_room:
+    - 'In what room?'
+  utter_ask_day:
+    - 'What day?'
+  utter_ask_hour_start:
+    - 'What time do you want to start your meeting?'
+  utter_ask_duration:
+    - 'How long would you need ?'
   
