@@ -2,29 +2,29 @@
   "action_fingerprints": {
     "action_listen": {
       "slots": [
-        "name_room",
         "name",
         "day",
-        "duration",
-        "hour_start"
+        "name_room",
+        "hour_start",
+        "duration"
       ]
     },
-    "utter_thanks": {
+    "utter_name": {
       "slots": []
     },
     "utter_goodbye": {
       "slots": []
     },
-    "utter_name": {
+    "utter_thanks": {
       "slots": []
     },
     "action_joke": {
       "slots": []
     },
-    "action_room": {
+    "utter_greet": {
       "slots": []
     },
-    "utter_greet": {
+    "action_room": {
       "slots": []
     }
   },
@@ -39,5 +39,5 @@
     "rasa_core.policies.keras_policy.KerasPolicy",
     "rasa_core.policies.memoization.MemoizationPolicy"
   ],
-  "trained_at": "20190221-224337"
+  "trained_at": "20190221-233324"
 }

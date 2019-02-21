@@ -8,6 +8,10 @@ import logging
 import requests
 import json
 from rasa_core_sdk import Action
+from booking import make_a_booking
+from mysql import connector
+
+
 
 logger = logging.getLogger(__name__)
 
@@ -36,7 +40,7 @@ class ActionBookRoom(Action):
         duration = tracker.get_slot('duration')
         
         booking_answer = make_a_booking(name_room, day, hour_start, duration)
-        
+        print("passed booking")
         if booking_answer:
             booking_answer = 'The reservation has been made'
         else:
@@ -48,10 +52,10 @@ class ActionBookRoom(Action):
         day = str(day)
         hour_start = str(hour_start)
         duration = str(duration)
-        
+        print("before connexion")
         #SQL queries#
-        cnx = mysql.connector.connect(host='I_really_don_t_know_what_to_use_here', password='your_password', user="your_user", database="the_database")
-             
+        cnx = connector.connect(host='I_really_don_t_know_what_to_use_here', password='your_password', user="your_user", database="the_database")
+        print("after connexion")
 
         dispatch = dispatcher.utter_message(response)
         dispatch = dispatcher.utter_message(str(booking_answer))

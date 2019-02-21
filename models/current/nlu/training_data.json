@@ -550,6 +550,78 @@
         "text": "9h"
       },
       {
+        "intent": "book_room",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "tomorrow",
+            "entity": "day"
+          }
+        ],
+        "text": "tomorrow"
+      },
+      {
+        "intent": "book_room",
+        "entities": [
+          {
+            "start": 0,
+            "end": 13,
+            "value": "December, 3rd",
+            "entity": "day"
+          }
+        ],
+        "text": "December, 3rd"
+      },
+      {
+        "intent": "book_room",
+        "entities": [
+          {
+            "start": 3,
+            "end": 12,
+            "value": "July, 4th",
+            "entity": "day"
+          }
+        ],
+        "text": "on July, 4th"
+      },
+      {
+        "intent": "book_room",
+        "entities": [
+          {
+            "start": 4,
+            "end": 14,
+            "value": "30 minutes",
+            "entity": "duration"
+          }
+        ],
+        "text": "for 30 minutes"
+      },
+      {
+        "intent": "book_room",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "1 hour",
+            "entity": "duration"
+          }
+        ],
+        "text": "1 hour"
+      },
+      {
+        "intent": "book_room",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "30 min",
+            "entity": "duration"
+          }
+        ],
+        "text": "30 min"
+      },
+      {
         "intent": "introduction",
         "text": "tell me about your personality"
       },
