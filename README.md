@@ -33,6 +33,7 @@ This clone of the starter-pack contains some training data and the main files wh
 	- thanks
 	- deny
 	- joke
+	- book_room (examples of this intent contain entities called 'name_room', 'hour_start', it lacks 'day' and 'duration')
 	- name (examples of this intent contain an entity called 'name')
 	
 - **nlu_config.yml** file contains the configuration of the Rasa NLU pipeline:  

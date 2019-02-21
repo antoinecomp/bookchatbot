@@ -105,6 +105,12 @@
 - [14h30](hour_start)
 - [8h](hour_start)
 - [9h](hour_start)
+- [tomorrow](day)
+- [December, 3rd](day)
+- on [July, 4th](day)
+- for [30 minutes](duration)
+- [1 hour](duration)
+- [30 min](duration)
 
 <!--- More examples --->
 
