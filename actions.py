@@ -54,7 +54,25 @@ class ActionBookRoom(Action):
         duration = str(duration)
         print("before connexion")
         #SQL queries#
-        cnx = connector.connect(host='I_really_don_t_know_what_to_use_here', password='your_password', user="your_user", database="the_database")
+        try:
+	        cnx = connector.connect(host='%', password='MySQL.2019', username="mike", database="alex")
+	        cursor = cnx.cursor()
+
+	        # add new booking
+	        add_booking = ("INSERT INTO reservations "
+                          "(name_room, hour_start, hour_end) "
+                          "VALUES (%s, %s, %s)")
+	        cursor.execute(add_employee, data_employee)
+
+        except mysql.connector.Error as err:
+            if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
+                print("Something is wrong with your user name or password")
+            elif err.errno == errorcode.ER_BAD_DB_ERROR:
+                print("Database does not exist")
+            else:
+                print(err)
+        else:
+            cnx.close()
         print("after connexion")
 
         dispatch = dispatcher.utter_message(response)
