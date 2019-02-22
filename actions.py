@@ -55,14 +55,14 @@ class ActionBookRoom(Action):
         print("before connexion")
         #SQL queries#
         try:
-	        cnx = connector.connect(host='%', password='MySQL.2019', username="mike", database="alex")
-	        cursor = cnx.cursor()
+	        cnx = connector.connect(host='localhost', password='MySQL.2019', username="root", database="alex")
+	        cursor = db.cursor()
 
 	        # add new booking
 	        add_booking = ("INSERT INTO reservations "
                           "(name_room, hour_start, hour_end) "
                           "VALUES (%s, %s, %s)")
-	        cursor.execute(add_employee, data_employee)
+	        cursor.execute(add_booking)
 
         except mysql.connector.Error as err:
             if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
