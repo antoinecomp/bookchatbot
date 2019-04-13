@@ -11,31 +11,51 @@ actions:
 - utter_thanks
 - utter_name
 - utter_ask_day
+config:
+  store_entities_as_slots: true
 entities:
 - hour_start
 - day
 - duration
 - name_room
 - name
+forms: []
 intents:
-- greet
-- book_room
-- name
-- goodbye
-- thanks
-- deny
-- joke
+- greet:
+    use_entities: true
+- book_room:
+    use_entities: true
+- name:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- thanks:
+    use_entities: true
+- deny:
+    use_entities: true
+- joke:
+    use_entities: true
 slots:
   day:
-    type: text
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
   duration:
-    type: text
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
   hour_start:
-    type: text
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
   name:
-    type: text
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
   name_room:
-    type: text
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
 templates:
   utter_ask_day:
   - text: What day?

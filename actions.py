@@ -38,9 +38,10 @@ class ActionBookRoom(Action):
         day = tracker.get_slot('day')
         hour_start = tracker.get_slot('hour_start')
         duration = tracker.get_slot('duration')
-        
+
+        print("before booking_answer")        
         booking_answer = make_a_booking(name_room, day, hour_start, duration)
-        print("passed booking")
+        print("booking_answer : " + booking_answer)
         if booking_answer:
             booking_answer = 'The reservation has been made'
         else:
@@ -56,12 +57,14 @@ class ActionBookRoom(Action):
         #SQL queries#
         try:
 	        cnx = connector.connect(host='localhost', password='MySQL.2019', username="root", database="alex")
+	        print("before execute")
 	        cursor = db.cursor()
 
 	        # add new booking
 	        add_booking = ("INSERT INTO reservations "
                           "(name_room, hour_start, hour_end) "
                           "VALUES (%s, %s, %s)")
+	        print("before execute")
 	        cursor.execute(add_booking)
 
         except mysql.connector.Error as err:

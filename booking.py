@@ -28,15 +28,25 @@ def is_the_room_available(name_room, day_only, day_startinghour, day_ending_hour
     query_select_all = ("SELECT * FROM reservations")
     cur_select_all.execute(query_select_all)
 
+    print("query_select_all: ")
+    print(query_select_all)
+
     # convert the entry starting and ending meeting hour to a tupple
     asked_starting_hour = from_pendulum_to_tupple(day_startinghour)
     asked_ending_hour = from_pendulum_to_tupple(day_ending_hour)
 
     # select all the name room, starting and ending meeting hour and append them to a list
-    for i in cur_select_all:
-        room_list.append(i[1])
-        starting_hour_list.append(from_pendulum_to_tupple(pendulum.parse(i[2])))
-        ending_hour_list.append(from_pendulum_to_tupple(pendulum.parse(i[3])))
+    print("cur_select_all: ")
+    print(cur_select_all)
+    # I wanted to unpack your tuple to make it easier to read
+    # but I do not know how big your tuple is so I added the *rest syntax
+    # which puts the rest of the elements in a new list called rest.
+    for x, room, start_time, end_time, *rest in cur_select_all:
+        room_list.append(room)
+        print("start_time: ", start_time)
+        print("end_time: ", end_time)
+        starting_hour_list.append(from_pendulum_to_tupple(start_time))
+        ending_hour_list.append(from_pendulum_to_tupple(end_time))
 
     # loop thru a list
     # if the asked room is equal to the room in the list
@@ -57,8 +67,9 @@ def is_the_room_available(name_room, day_only, day_startinghour, day_ending_hour
 # main function
 def make_a_booking(name_room, day, hour_start, duration):
 
+    print(name_room, day, hour_start, duration)
     # connect to the localhost database
-    cnx = mysql.connector.connect(password='jeb41jeb', user="root", database="alex")
+    cnx = mysql.connector.connect(password='MySQL.2019', user="root", database="alex")
 
     #day_only : get the parsed date
     day_only = str(dateparser.parse(day).date())

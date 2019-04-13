@@ -191,3 +191,105 @@
  - utter_thanks
 * goodbye
  - utter_goodbye 
+
+## Generated Story 8070679053955036713
+* greet
+    - utter_greet
+* book_room
+    - utter_ask_room
+* book_room
+    - utter_ask_day
+* book_room{"name_room": "blue"}
+    - slot{"name_room": "blue"}
+    - utter_ask_day
+* book_room{"day": "tomorrow"}
+    - slot{"day": "tomorrow"}
+    - utter_ask_hour_start
+* book_room{"hour_start": "1pm"}
+    - slot{"hour_start": "1pm"}
+    - utter_ask_duration
+* book_room{"duration": "30 min"}
+    - slot{"duration": "30 min"}
+    - action_room
+* goodbye
+    - utter_goodbye
+    - export
+
+## Generated Story -5977270671181011094
+* greet
+    - utter_greet
+* book_room
+    - utter_ask_room
+* book_room{"name_room": "blue"}
+    - slot{"name_room": "blue"}
+    - utter_ask_day
+* book_room{"day": "tomorrow"}
+    - slot{"day": "tomorrow"}
+    - utter_ask_hour_start
+* book_room{"hour_start": "1pm"}
+    - slot{"hour_start": "1pm"}
+    - utter_ask_duration
+* book_room{"duration": "30 min"}
+    - slot{"duration": "30 min"}
+    - action_room
+* goodbye
+    - utter_goodbye
+    - export
+## Generated Story -5991671691308871044
+* greet
+    - utter_greet
+* book_room
+    - utter_ask_room
+* book_room{"name_room": "blue"}
+    - slot{"name_room": "blue"}
+    - utter_ask_day
+* book_room{"day": "tomorrow"}
+    - slot{"day": "tomorrow"}
+    - utter_ask_hour_start
+* book_room{"hour_start": "1pm"}
+    - slot{"hour_start": "1pm"}
+    - utter_ask_duration
+* book_room{"duration": "30 minutes"}
+    - slot{"duration": "30 minutes"}
+    - action_room
+* goodbye
+    - utter_goodbye
+
+## Generated Story -2720950560744020465
+* greet
+    - utter_name
+* name
+    - utter_greet
+* book_room
+    - utter_ask_room
+* book_room{"name_room": "blue"}
+    - slot{"name_room": "blue"}
+    - utter_ask_day
+* book_room{"day": "tomorrow"}
+    - slot{"day": "tomorrow"}
+    - utter_ask_hour_start
+* book_room{"hour_start": "14h"}
+    - slot{"hour_start": "14h"}
+    - utter_ask_duration
+* book_room{"duration": "30 minutes"}
+    - slot{"duration": "30 minutes"}
+    - action_room
+
+## Generated Story 413668697040995566
+* greet
+    - utter_greet
+* book_room
+    - utter_ask_room
+* book_room{"name_room": "blue"}
+    - slot{"name_room": "blue"}
+    - utter_ask_day
+* book_room{"day": "4-12-2019"}
+    - slot{"day": "4-12-2019"}
+    - utter_ask_hour_start
+* book_room{"hour_start": "1pm"}
+    - slot{"hour_start": "1pm"}
+    - utter_ask_duration
+* book_room{"duration": "30 minutes"}
+    - slot{"duration": "30 minutes"}
+    - action_room
+
