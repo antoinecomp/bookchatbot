@@ -8,6 +8,9 @@ from robot.libraries.DateTime import convert_time
 
 # function to return a tuple from the pendulum object type
 def from_pendulum_to_tupple(date):
+    print("date: ")
+    print(date)
+    print("type : " + str(type(date)))
     year = date.year
     month = date.month
     day = date.day
@@ -41,7 +44,8 @@ def is_the_room_available(name_room, day_only, day_startinghour, day_ending_hour
     # I wanted to unpack your tuple to make it easier to read
     # but I do not know how big your tuple is so I added the *rest syntax
     # which puts the rest of the elements in a new list called rest.
-    for x, room, start_time, end_time, *rest in cur_select_all:
+    #for x, room, start_time, end_time, *rest in cur_select_all:
+    for room, start_time, end_time, *rest in cur_select_all:
         room_list.append(room)
         print("start_time: ", start_time)
         print("end_time: ", end_time)

@@ -1,27 +1,27 @@
 %YAML 1.1
 ---
 actions:
-- utter_ask_duration
-- action_room
-- utter_ask_hour_start
-- utter_greet
-- utter_ask_room
+- utter_name
 - utter_goodbye
 - action_joke
-- utter_thanks
-- utter_name
+- utter_greet
 - utter_ask_day
+- utter_ask_room
+- utter_ask_hour_start
+- utter_ask_duration
+- action_room
+- utter_thanks
 entities:
-- hour_start
-- day
-- duration
 - name_room
+- hour_start
+- duration
+- day
 - name
 intents:
 - greet
 - book_room
-- name
 - goodbye
+- name
 - thanks
 - deny
 - joke

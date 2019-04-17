@@ -293,3 +293,77 @@
     - slot{"duration": "30 minutes"}
     - action_room
 
+## Generated Story -6594185736277895606
+* greet
+    - utter_greet
+* book_room
+    - utter_ask_room
+* book_room{"name_room": "red"}
+    - slot{"name_room": "red"}
+    - utter_ask_day
+* book_room{"day": "4-17-2019"}
+    - slot{"day": "4-17-2019"}
+    - utter_ask_hour_start
+* book_room{"hour_start": "1pm"}
+    - slot{"hour_start": "1pm"}
+    - utter_ask_duration
+* book_room{"duration": "30 minutes"}
+    - slot{"duration": "30 minutes"}
+    - action_room
+* goodbye
+    - utter_goodbye
+
+## Generated Story -4247033572764885338
+* greet
+    - utter_greet
+* book_room
+    - utter_ask_room
+* book_room{"name_room": "blue"}
+    - slot{"name_room": "blue"}
+    - utter_ask_day
+* book_room{"day": "4-17-2019"}
+    - slot{"day": "4-17-2019"}
+    - utter_ask_hour_start
+* book_room{"hour_start": "1pm"}
+    - slot{"hour_start": "1pm"}
+    - utter_ask_duration
+* book_room{"duration": "30 minutes"}
+    - slot{"duration": "30 minutes"}
+    - action_room
+
+## Generated Story -5799271407599581035
+* greet
+    - utter_greet
+* book_room
+    - utter_ask_room
+* book_room{"name_room": "blue"}
+    - slot{"name_room": "blue"}
+    - utter_ask_day
+* book_room{"day": "4-17-2019"}
+    - slot{"day": "4-17-2019"}
+    - utter_ask_hour_start
+* book_room{"hour_start": "2pm"}
+    - slot{"hour_start": "2pm"}
+    - utter_ask_duration
+* book_room{"duration": "30 minutes"}
+    - slot{"duration": "30 minutes"}
+    - action_room
+
+## Generated Story -3820423260628444889
+* greet
+    - utter_greet
+* book_room
+    - utter_ask_room
+* book_room{"name_room": "blue"}
+    - slot{"name_room": "blue"}
+    - utter_ask_day
+* book_room{"day": "4-17-2019"}
+    - slot{"day": "4-17-2019"}
+    - utter_ask_hour_start
+* book_room{"hour_start": "3pm"}
+    - slot{"hour_start": "3pm"}
+    - utter_ask_duration
+* book_room{"duration": "30 minutes"}
+    - slot{"duration": "30 minutes"}
+    - action_room
+

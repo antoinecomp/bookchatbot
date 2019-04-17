@@ -1,33 +1,33 @@
 %YAML 1.1
 ---
 actions:
-- utter_ask_duration
-- action_room
-- utter_ask_hour_start
-- utter_greet
-- utter_ask_room
-- utter_goodbye
 - action_joke
 - utter_thanks
 - utter_name
+- utter_ask_room
+- action_room
 - utter_ask_day
+- utter_goodbye
+- utter_greet
+- utter_ask_duration
+- utter_ask_hour_start
 config:
   store_entities_as_slots: true
 entities:
-- hour_start
-- day
 - duration
-- name_room
 - name
+- hour_start
+- name_room
+- day
 forms: []
 intents:
 - greet:
     use_entities: true
 - book_room:
     use_entities: true
-- name:
-    use_entities: true
 - goodbye:
+    use_entities: true
+- name:
     use_entities: true
 - thanks:
     use_entities: true
