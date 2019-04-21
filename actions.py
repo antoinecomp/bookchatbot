@@ -7,6 +7,10 @@ from __future__ import unicode_literals
 import logging
 import requests
 import json
+import mysql
+
+import dateutil.parser as dparser
+
 from rasa_core_sdk import Action
 from booking import make_a_booking
 from mysql import connector
@@ -41,7 +45,7 @@ class ActionBookRoom(Action):
 
         print("before booking_answer")        
         booking_answer = make_a_booking(name_room, day, hour_start, duration)
-        print("booking_answer : " + booking_answer)
+        print("booking_answer : " + str(booking_answer))
         if booking_answer:
             booking_answer = 'The reservation has been made'
         else:
@@ -56,16 +60,16 @@ class ActionBookRoom(Action):
         print("before connexion")
         #SQL queries#
         try:
-	        cnx = connector.connect(host='localhost', password='MySQL.2019', username="root", database="alex")
-	        print("before execute")
-	        cursor = db.cursor()
+            cnx = mysql.connector.connect(password='MySQL.2019', user="root", database="alex")
+            print("before execute")
+            cursor = cnx.cursor()
 
-	        # add new booking
-	        add_booking = ("INSERT INTO reservations "
+            # add new booking
+            add_booking = ("INSERT INTO reservations "
                           "(name_room, hour_start, hour_end) "
                           "VALUES (%s, %s, %s)")
-	        print("before execute")
-	        cursor.execute(add_booking)
+            print("before execute")
+            cursor.execute(add_booking)
 
         except mysql.connector.Error as err:
             if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:

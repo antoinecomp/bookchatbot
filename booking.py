@@ -3,19 +3,26 @@ from datetime import datetime, time
 import dateparser
 import pendulum
 import string
-import dateutil.parser
+import dateutil
+from dateutil import *
 from robot.libraries.DateTime import convert_time
 
 # function to return a tuple from the pendulum object type
 def from_pendulum_to_tupple(date):
-    print("date: ")
-    print(date)
-    print("type : " + str(type(date)))
-    year = date.year
-    month = date.month
-    day = date.day
-    hour = date.hour
-    minute = date.minute
+    print("date: {}".format(date))
+    if (isinstance(date, datetime)):
+        year = date.year
+        month = date.month
+        day = date.day
+        hour = date.hour
+        minute = date.minute
+    else:
+        date = dateutil.parser.parse(date,fuzzy=True)
+        year = date.year
+        month = date.month
+        day = date.day
+        hour = date.hour
+        minute = date.minute
     return (year, month, day, hour, minute)
 
 # function to check if the room asked is free while looking in the database
